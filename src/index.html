@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Majulock Mail App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="main">
+    <div class="header">
+      <div class="logo">
+        <img src="../assets/Majulock.png" alt="Majulock Logo" />
+        <h2>mailer</h2>
+      </div>
+    </div>
+    <div class="form">
+      <form action="#" method="POST">
+        <div class="user-group">
+          <div class="user-input">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="your.email@example.com" required />
+          </div>
+
+          <div class="user-input">
+            <label for="appPassword">Your App Password</label>
+            <input type="password" id="appPassword" name="appPassword" placeholder="It's not your email password!!" required />
+          </div>
+        </div>
+
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" placeholder="Subject of your message" required />
+
+        <label for="emails-list">Recipients (comma " , " separated)</label>
+        <textarea id="emails-list" name="emails-list" placeholder="recipient1@example.com, recipient2@example.com" required></textarea>
+
+        <label for="body">Message Body</label>
+        <textarea id="body" name="body" placeholder="Write your message here..." required></textarea>
+
+        <div class="attachment-group">
+          <label for="attachment">Attachment</label>
+          <input type="file" id="attachment" multiple />
+        </div>
+
+        <button type="submit">Send Mail</button>
+
+        <div id="status"></div>
+      </form>
+    </div>
+    <div class="footer">
+      &copy; Made by Eclipse Did Nothing Wrong.
+    </div>
+  </div>
+  <script src="rendrer.js"></script>
+</body>
+</html>
